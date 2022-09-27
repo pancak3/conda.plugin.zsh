@@ -4,12 +4,12 @@
 
 # the prompt
 function conda_prompt_info() {
-  echo "${ZSH_THEME_CONDA_PROMPT_PREFIX}$(conda_env)${ZSH_THEME_CONDA_PROMPT_SEPARATOR}$(conda_py_ver)${ZSH_THEME_CONDA_PROMPT_SUFFIX}"
+  echo "$(conda_env)${ZSH_THEME_CONDA_PROMPT_SEPARATOR}$(conda_py_ver)"
 }
 
 # a simpler prompt (this is the more tradtional version)
 function conda_env_prompt_info() {
-  echo "${ZSH_THEME_CONDA_PROMPT_PREFIX}$(conda_env)${ZSH_THEME_CONDA_PROMPT_SUFFIX}"
+  echo "$(conda_env)"
 }
 
 # Conda evniornment
@@ -36,9 +36,7 @@ alias conup='conda update'
 alias conin='conda install'
 
 # Default values for the appearance of the prompt. Customize in your theme if you like.
-ZSH_THEME_CONDA_PROMPT_PREFIX="%{$FG[028]%}("
-ZSH_THEME_CONDA_PROMPT_SUFFIX=")%{$reset_color%}"
-ZSH_THEME_CONDA_PROMPT_SEPARATOR="|"
+ZSH_THEME_CONDA_PROMPT_SEPARATOR=" "
 
 
 #Disable conda prompt changes
