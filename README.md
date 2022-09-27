@@ -7,10 +7,14 @@ Just a tiny little plugin to provide a prompt element for Conda installations an
 ## What to do to install it.
 
 1. Naviagate to `.oh-my-zsh/custom/plugins`
- Create a folder named `conda`
+ create a folder named `conda`
 2. Copy `conda.plugin.zsh` to the created `conda` folder.
-3. Activate the plugin by add `conda` to `plugins` value in `~/.zshrc` file, it should looks like `plugins=(git conda)`
-4. Add `$(conda_prompt_info)` before the value of your `PROMPT` enviroment. If you are using a theme of `ohmyzsh`, you may need to change the `PROMPT` under the respective theme. E.g., `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`
+3. Activate the plugin by add `conda` to `plugins` value in `~/.zshrc` file, it looks like `plugins=(git conda)`
+4. Add `$(conda_prompt_info)` in the value of your `PROMPT` enviroment. If you are using a theme of `ohmyzsh`, you may need to change the `PROMPT` under the respective theme. E.g., `~/.oh-my-zsh/themes/robbyrussell.zsh-theme`. Mine looks like 
+    ```
+    PROMPT=$'
+    %{$fg_bold[white]%}***$(conda_prompt_info)***%{$reset_color%} %{$fg_bold[green]%}%n@%m  ...'
+    ```
 5. Run `source ~/.zshrc` or open a new terminal.
 
 ## Configuration Variables
