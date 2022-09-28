@@ -26,14 +26,6 @@ function conda_py_ver() {
   fi
 }
 
-# Conda aliases
-alias cact='conda activate'
-alias cdeact='conda deactivate'
-alias cls='conda list'
-alias cels='conda env list'
-alias ccen='conda create --name'
-alias conup='conda update'
-alias conin='conda install'
 
 # Default values for the appearance of the prompt. Customize in your theme if you like.
 ZSH_THEME_CONDA_PROMPT_SEPARATOR=" "
